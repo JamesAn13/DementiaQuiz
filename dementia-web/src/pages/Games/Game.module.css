@@ -1,0 +1,108 @@
+.game-bg {
+  min-height: 100vh;
+  width: 100vw;
+  background-image: url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1200&q=80');
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.container {
+  max-width: 700px;
+  margin: 60px auto 0 auto;
+  padding: 32px 20px;
+  background: rgba(255,255,255,0.93);
+  border-radius: 18px;
+  box-shadow: 0 4px 24px rgba(25, 118, 210, 0.10);
+  text-align: center;
+}
+
+.title {
+  font-size: 2.1rem;
+  font-weight: bold;
+  margin-bottom: 32px;
+  color: #1976d2;
+  letter-spacing: 2px;
+}
+
+.levelSelect {
+  margin-bottom: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+}
+
+.levelSelect label {
+  font-weight: bold;
+  font-size: 1.1rem;
+}
+
+.selectBox {
+  padding: 8px 18px;
+  border-radius: 8px;
+  border: 1.5px solid #1976d2;
+  font-size: 1rem;
+  background: #f5faff;
+  color: #1976d2;
+  outline: none;
+  transition: border 0.2s;
+}
+
+.selectBox:focus {
+  border: 2px solid #1565c0;
+}
+
+.gameGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3열 고정 */
+  gap: 22px;
+  margin-top: 10px;
+}
+
+@media (max-width: 900px) {
+  .gameGrid {
+    grid-template-columns: repeat(2, 1fr); /* 태블릿에서 2열 */
+  }
+}
+
+@media (max-width: 600px) {
+  .gameGrid {
+    grid-template-columns: 1fr; /* 모바일에서 1열 */
+  }
+}
+
+.gameBtn {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 28px 0 18px 0;
+  font-size: 1.25rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 16px;
+  background: linear-gradient(90deg, #1976d2 60%, #64b5f6 100%);
+  color: #fff;
+  cursor: pointer;
+  box-shadow: 0 2px 10px rgba(25, 118, 210, 0.10);
+  transition: background 0.2s, transform 0.1s, box-shadow 0.2s;
+  letter-spacing: 1px;
+  min-height: 90px;
+  position: relative;
+}
+
+.gameBtn:hover, .gameBtn:focus {
+  background: linear-gradient(90deg, #1565c0 60%, #90caf9 100%);
+  transform: translateY(-3px) scale(1.04);
+  box-shadow: 0 6px 18px rgba(25, 118, 210, 0.18);
+}
+
+.gameBtn span {
+  font-size: 2.1rem;
+  margin-bottom: 8px;
+}
